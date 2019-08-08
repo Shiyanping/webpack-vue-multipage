@@ -1,0 +1,28 @@
+## OS
+.DS_Store
+.idea
+LICENSE
+.editorconfig
+package-lock.json
+yarn.lock
+
+# Ignored suffix
+*.log
+*.md
+*.svg
+*.ico
+*.jpg
+*.gif
+*.png
+*.py
+*ignore
+*.env.*
+node_modules
+
+## Local
+test
+
+## Built-files
+docs
+dist
+.cache
