@@ -13,7 +13,7 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    contentBase: path.resolve(__dirname, '../dist'),
+    contentBase: '../dist',
     proxy: {},
     open: true,
     hot: true,
@@ -47,7 +47,7 @@ module.exports = {
           {
             loader: 'sass-resources-loader',
             options: {
-              resources: path.resolve(__dirname, '../src/styles/lib/main.scss')
+              resources: path.resolve(__dirname, '../src/styles/main.scss')
             }
           }
         ]

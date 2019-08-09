@@ -1,6 +1,6 @@
 // 引入基础配置
 const path = require('path');
-// 清理 dist 文件夹
+// 清理打包的文件夹
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 // js 压缩、优化插件
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -30,7 +30,7 @@ module.exports = {
           {
             loader: 'sass-resources-loader',
             options: {
-              resources: path.resolve(__dirname, '../src/styles/lib/main.scss')
+              resources: path.resolve(__dirname, '../src/styles/main.scss')
             }
           }
         ]
@@ -87,7 +87,6 @@ module.exports = {
     ]
   },
   plugins: [
-    // 自动清理 dist 文件夹
     new CleanWebpackPlugin(['dist'], {
       root: path.resolve(__dirname, '..'),
       verbose: true, //开启在控制台输出信息

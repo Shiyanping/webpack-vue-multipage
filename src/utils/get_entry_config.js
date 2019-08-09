@@ -34,6 +34,8 @@ config.HTMLDirs.forEach((item) => {
     pageHtml = 'src/template/default.html';
   }
 
+  console.log(pageHtml);
+
   const htmlPlugin = new HTMLWebpackPlugin({
     title: item.title, // 生成的html页面的标题
     filename: filename, // 生成到dist目录下的 html 文件名称

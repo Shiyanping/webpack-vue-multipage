@@ -6,6 +6,7 @@
       <button @click="add">add count</button>
     </div>
     <img src="../../assets/logo.png" alt="" />
+    <button>111</button>
   </div>
 </template>
 <script>
@@ -26,7 +27,7 @@ export default {
 .index {
   position: relative;
   font-size: 24px;
-  color: $titleColor;
+  // color: $titleColor;
   .count {
     text-align: center;
   }

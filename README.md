@@ -249,7 +249,6 @@ Entries[item.page] = [
 ```js
 // src/pages/**/index.js
 import Vue from "vue";
-// import '@styles/lib/main.scss';
 import Tpl from "./index.vue";
 import store from "../../store";
 import "babel-polyfill";

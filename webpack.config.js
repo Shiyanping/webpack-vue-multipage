@@ -11,12 +11,14 @@ const resolve = (dir) => {
   return path.resolve(__dirname, dir);
 };
 
+const distPath = resolve('dist');
+
 const webpackBaseConfig = {
   entry: entryConfig.Entries,
   output: {
     publicPath: '/',
     filename: 'js/[name].[hash:8].js',
-    path: resolve('dist')
+    path: distPath
   },
   module: {
     rules: [
@@ -48,12 +50,12 @@ const webpackBaseConfig = {
     new CopyWebpackPlugin([
       {
         from: resolve('public'),
-        to: resolve('dist'),
+        to: distPath,
         ignore: ['*.html']
       },
       {
         from: resolve('src/scripts/lib'),
-        to: resolve('dist')
+        to: distPath
       }
     ]),
     ...entryConfig.HTMLPlugins // 利用 HTMLWebpackPlugin 插件合成最终页面
