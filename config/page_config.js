@@ -17,6 +17,10 @@ module.exports = {
     {
       page: 'detail',
       title: '详情页'
+    },
+    {
+      page: 'growth_report',
+      title: '儿童成长报告'
     }
   ],
   imgOutputPath: 'img/',

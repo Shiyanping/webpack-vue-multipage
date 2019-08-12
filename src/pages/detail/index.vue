@@ -9,7 +9,7 @@
 </template>
 <script>
 import HeaderBar from '@components/Header';
-// import { getClubActivityList, getClubDetail } from '@/api/detail';
+import { getClubActivityList, getClubDetail } from '@/api/detail';
 export default {
   components: {
     HeaderBar
@@ -21,20 +21,18 @@ export default {
     };
   },
   async created() {
-    // 测试网路请求
-    // const result = await getClubActivityList();
-    // this.result = `非jsonp请求：${JSON.stringify(result)}`
-    // console.log('非jsonp请求：', result);
-    // const result1 = await getClubDetail();
-    // this.result1 = `jsonp请求：${JSON.stringify(result1)}`
-    // console.log('jsonp:', result1);
+    const result = await getClubActivityList();
+    this.result = `非jsonp请求：${JSON.stringify(result)}`;
+    console.log('非jsonp请求：', result);
+    const result1 = await getClubDetail();
+    this.result1 = `jsonp请求：${JSON.stringify(result1)}`;
+    console.log('jsonp:', result1);
   },
   methods: {}
 };
 </script>
 <style lang="scss">
 .detail {
-  font-size: 24px;
-  // color: $titleColor;
+  @include font-dpr(12px); // color: $titleColor;;
 }
 </style>
